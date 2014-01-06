@@ -10,8 +10,9 @@
 		$( function() {
 			$( "#panel" ).panel();
 		});
-		$( document ).on( "pageshow", function(){
+		$( document ).on( "pageshow", "div[data-role='page']", function(){
 			if( $( this ).attr("id") !== "home" ) {
+				$( "#panel" ).panel();
 				$( "#panel" ).panel( "open" );
 			}
 		});
