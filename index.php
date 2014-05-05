@@ -30,12 +30,13 @@
 			margin: 1.5%;
 			float: left;
 			text-align: center;
+			height: 90%;
 		}
 		.ui-page-theme-a .icon-block, .ui-page-theme-a .icon-block:active, .ui-page-theme-a .icon-block:visited, .ui-page-theme-a .icon-block:hover{
 			background: rgb( 200, 200, 200 ); /* The Fallback */
 			background: rgba( 20, 20, 20, 0.7 );
-			height: 150px;
-			width: 250px;
+			height: 30%;
+			width: 75%;
 			color: white;
 			font-size: 30px;
 			text-align: center;
@@ -48,29 +49,19 @@
 		}
 		.main-image{
 			width:100%;
+			max-height: 100%;
 		}
 
-		.menu-icon{
-			height:80%;
-			display: block;
-			margin-left: 25%;
-		}
-
-		.map-icon{
-			height:80%;
-			display: block;
-			margin-left: 35%;
-		}
-		.bear-icon{
-			height:80%;
-			display: block;
-			margin-left: 35%;
+		.icon-block img{
+			width: 40%;
+			display:block;
+			margin-left: 30%;
 		}
 		.panel-image{
 			width: 50%;
 			margin-left: 25%;
 		}
-		div.footer.ui-footer{
+		sddiv.footer.ui-footer{
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -80,19 +71,43 @@
 			background: rgba( 20, 20, 20, 0.7 );
 			color: white;
 		}
+		.portrait-main-image{
+			width:100%;
+			padding-left: 25%;
+		}
+		.portrait-main-image img {
+			width:50%;
+		}
+		.portrait-content{
+			display:none;
+		}
+		.landscape-content{
+			height:100%;
+		}
+		#home {
+			height: 100%;
+		}
+		@media screen and ( orientation:portrait ) {
+			.landscape-content{
+				display:none;
+			}
+			.portrait-content{
+				display:block;
+			}
+		}
 	</style>
 </head>
 <body>
 	<div data-role="page" id="home">
-		<div class="ui-content" role="main">
+		<div class="landscape-content" role="main">
 			<div class="grid-3">
 				<a href="#menu" class="icon-block" data-transition="slide">
-					<img src="/images/menu.png" alt="menu" title="menu" class="menu-icon"/>
+					<img src="/images/menu.png" alt="menu" title="menu"/>
 					Menu
 				</a>
 				<a class="icon-block">
-					<img src="/images/map-pin.svg" alt="map" title="map" class="map-icon"/>
-					Map & Directions
+					<img src="/images/map-pin.png" alt="map" title="map"/>
+					Directions
 				</a>
 			</div>
 			<div class="grid-3">
@@ -100,55 +115,23 @@
 			</div>
 			<div class="grid-3">
 				<a class="icon-block">
-					<img src="/images/bear.png" alt="about us" title="about us" class="bear-icon"/>
+					<img src="/images/bear.png" alt="about us" title="about us"/>
 					About Us
 				</a>
 				<a class="icon-block">
-					<img src="/images/events-icon.png" alt="eventss" title="events" class="menu-icon"/>
+					<img src="/images/events-icon.png" alt="eventss" title="events"/>
 					Menu
 				</a>
 			</div>
 		</div><!-- content -->
-		<div class="footer" data-role="footer" data-fullscreen="true">
-			<h1>223 Lisbon St. Lewiston Maine</h1>
-		</div>
+		<div class="ui-content portrait-content" role="main">
+			<div class="portrait-main-image">
+				<img src="images/bitmap.png" alt="Bear Bones Beer" class="main-image" title="Bear Bones Beer"/>
+			</div>
+		</div><!-- content -->
+		
 	</div><!-- page -->
-	<div id="panel" data-theme="a">
-			<img src="images/bitmap.png" alt="Bear Bones Beer" class="panel-image" title="Bear Bones Beer"/>
-
-			<ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-body-b">
-				<li class="ui-li-has-thumb ui-first-child">
-					<a href="#home" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
-						<img src="/images/menu.png" alt="menu" title="menu"/>
-						<h1>Home</h1>
-					</a>
-				</li>
-				<li class="ui-li-has-thumb ui-first-child">
-					<a href="#home" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
-						<img src="/images/menu.png" alt="menu" title="menu"/>
-						<h1>Menu</h1>
-					</a>
-				</li>
-				<li class="ui-li-has-thumb ui-first-child">
-					<a href="#map" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
-						<img src="/images/map-pin.svg" alt="map" title="map"/>
-						<h1>Map & Directions</h1>
-					</a>
-				</li>
-				<li class="ui-li-has-thumb ui-first-child">
-					<a href="#about" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
-						<img src="/images/bear.png" alt="about us" title="about us"/>
-						<h1>About Us</h1>
-					</a>
-				</li>
-				<li class="ui-li-has-thumb ui-first-child">
-					<a href="#events" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
-						<img src="/images/events-icon.png" alt="events" title="events"/>
-						<h1>Events</h1>
-					</a>
-				</li>
-			</ul>
-		</div>
+	
 	<div data-role="page" id="menu">
 		
 	</div>
