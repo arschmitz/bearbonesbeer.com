@@ -1,4 +1,1 @@
-bearbonesbeer.com
-=================
-
-bearbonesbeer.com
+Website for Bear Bones Beer
