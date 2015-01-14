@@ -121,11 +121,11 @@ body {
 .hide {
     display: none;
 }
-.row-text {
-    display: none;
-}
 .side-img {
 
+}
+nav {
+    opacity: .9;
 }
 .ui-widget-overlay {
     position: fixed;
@@ -141,7 +141,7 @@ body {
     z-index: 101;
 }
 
-.jumbotron {
+.row, .jumbotron {
     background-color: rgba( 250,235, 215, .4 );
 }
 
