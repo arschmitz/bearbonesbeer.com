@@ -103,7 +103,7 @@ html body * {
 }
 body {
     font-family: 'Droid Serif', serif !important;
-    background-image: url( /img/watermark.png );
+    background-image: url( http://i.imgur.com/yQ0O2X5.png );
     background-attachment: fixed;
     background-size: 100% auto;
 }
@@ -144,7 +144,41 @@ nav {
 .row, .jumbotron {
     background-color: rgba( 250,235, 215, .4 );
 }
+.jumbotron .row {
+    background: none;
+}
+h1 {
+    position:relative;
+}
+h1 .scroll-link {
+    position: absolute;
+    top: -100px;
+}
+.image-header {
+    position:relative;
 
+    height: 350px;
+    overflow:hidden;
+}
+.image-header img {
+    width:100%;
+}
+.image-header .image-header-text {
+    position: absolute;
+    color: white;
+    top:30px;
+    width:100%;
+    left:30px;
+    font-size: 60px;
+    text-shadow: 3px 3px 3px black;
+    width: 95%;
+}
+.image-header .image-header-text * {
+    color: white;
+}
+.image-header .image-header-text hr {
+   margin: 0;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
