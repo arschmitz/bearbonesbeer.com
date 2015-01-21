@@ -152,25 +152,30 @@ h1 {
 }
 h1 .scroll-link {
     position: absolute;
-    top: -100px;
+    top: 0px;
 }
 .image-header {
     position:relative;
 
-    height: 350px;
+    height: 200px;
     overflow:hidden;
 }
 .image-header img {
     width:100%;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 .image-header .image-header-text {
     position: absolute;
     color: white;
-    top:30px;
+    top:70px;
     width:100%;
     left:30px;
     font-size: 60px;
-    text-shadow: 3px 3px 3px black;
+    text-shadow: 0 0 6px black;
     width: 95%;
 }
 .image-header .image-header-text * {
@@ -178,6 +183,15 @@ h1 .scroll-link {
 }
 .image-header .image-header-text hr {
    margin: 0;
+}
+
+.stuck {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 1000;
 }
 /* ==========================================================================
    Helper classes

@@ -69,11 +69,12 @@
 			<h1 class="confirm-text">Are you 21 Year or older?</h1>
 		</div>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 		<script src="js/plugins.js"></script>
 		<script src="js/vendor/jquery-ui.js"></script>
 		<script src="js/vendor/jqueryui-bootstrap-adapter.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+		<script src="//cdn.rawgit.com/imakewebthings/waypoints/3.1.0/lib/jquery.waypoints.min.js"></script>
+        <script src="https://cdn.rawgit.com/imakewebthings/waypoints/3.1.0/lib/shortcuts/sticky.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
 		<script src="js/main.js"></script>
 		<script src="https://cdn.rawgit.com/chriszarate/sheetrock/0.2.4/dist/jquery.sheetrock.min.js"></script>
@@ -118,7 +119,7 @@
 				<div class="image-header">
 					<img src="{{this.cells.B}}">
 					<div class="image-header-text">
-						<{{this.cells.D}} class="row-text">{{this.cells.C}}</{{this.cells.D}}>
+						<{{this.cells.D}} class="sticky-header-text">{{this.cells.C}}</{{this.cells.D}}>
 						<hr/>
 					</div>
 				</div>

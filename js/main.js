@@ -11,22 +11,38 @@ var beer = {
 	waypoints: function(){
 		$( ".row-text" ).waypoint({
 			handler: function( dir ) {
-				$( this ).animate({
+				$( this.element ).animate({
 					opacity: dir === "down" ? 0 : .8
 				}, 500);
 			},
 			offset: function(){
-				return ( $( this ).height() * .5 ) * -1;
+				return ( $( this.element ).height() * .5 ) * -1;
 			}
+		});
+		$( ".image-header" ).each(function(){
+			new Waypoint.Sticky({
+				element: this
+			});
+		});
+
+		$( ".image-header-text" ).css({
+			opacity: 0
+		}).waypoint({
+			handler: function( dir ) {
+				$( this.element ).animate({
+					opacity: dir === "up" ? 0 : .8
+				}, 500);
+			},
+			offset: 50
 		});
 		$( ".row-text" ).waypoint({
 			handler: function( dir ) {
-				$( this ).animate({
+				$( this.element ).animate({
 					opacity: dir === "up" ? 0 : .8
 				}, 500);
 			},
 			offset: function(){
-				return $( window ).height() - ( $( this ).height() / 2 );
+				return $( window ).height() - ( $( this.element ).height() / 2 );
 			}
 		});
 		$( ".row-text" ).css({
@@ -35,7 +51,7 @@ var beer = {
 		// Apply active style to menu items as we scroll
 		$( ".scroll-link" ).waypoint(function(){
 			$( "nav .active" ).removeClass( "active" );
-			$( "[href$='" + this.id + "']" ).parent().addClass( "active" );
+			$( "[href$='" + this.element.id + "']" ).parent().addClass( "active" );
 		});
 	},
 	navbar: function(){
