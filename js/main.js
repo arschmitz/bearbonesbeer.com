@@ -1,11 +1,38 @@
 $(function(){
-var beer = {
+window.beer = {
 	table: function(){
 		$( "table" ).each(function(){
 			$( this ).sheetrock({
 				url: $( this ).attr( "src" ),
 				userCallback: beer.waypoints
 			});
+		});
+	},
+	push: function() {
+		beer.moving();
+	},
+	pull: function() {
+		beer.moving();
+	},
+	moving: function(){
+		var pulling = $( ".moving" ),
+			ele = pulling.parent(),
+			width = ele.width(),
+			windowWidth = $( window ).width(),
+			step = ( windowWidth - width ) / 200,
+			top = ele.offset() ? ele.offset().top : 0,
+			current = 200 - ( top - $( window ).scrollTop() ),
+			newWidth = width + ( step * current ),
+			margin = newWidth / 2;
+		current =  current > 200 ? 200 : current;
+		current =  current < 0 ? 0 : current;
+		pulling.css({
+			width: newWidth,
+			"margin-left": -1 * margin,
+			left: "50%"
+		});
+		$( ".stuck" ).css({
+			top: -1 * current
 		});
 	},
 	waypoints: function(){
@@ -20,8 +47,37 @@ var beer = {
 			}
 		});
 		$( ".image-header" ).each(function(){
-			new Waypoint.Sticky({
-				element: this
+			var ele = $( this ).wrap( "<div>" ),
+				parent = ele.parent(),
+				id = ele.uniqueId()[ 0 ].id;
+
+			parent
+				.height( ele.height() )
+				.width( ele.width() )
+				.waypoint({
+					offset: "200px",
+					handler: function( dir ){
+						if ( dir === "down" ){
+							ele.addClass( "moving" );
+							$( window ).on( "scroll." + id, beer.push );
+						} else {
+							ele.removeClass( "moving" );
+							ele.attr( "style", "" );
+							$( window ).off( "scroll." + id, beer.pull );
+						}
+					}
+				});
+			parent.waypoint(function( dir ){
+				if ( dir === "down" ) {
+					ele.addClass( "stuck" );
+					ele.removeClass( "moving" );
+					ele.attr( "style", "" );
+					$( window ).off( "scroll." + id, beer.push );
+				} else {
+					ele.addClass( "moving" );
+					ele.removeClass( "stuck" );
+					$( window ).on( "scroll." + id, beer.pull );
+				}
 			});
 		});
 
@@ -79,20 +135,35 @@ var beer = {
 		});
 	},
 	confirmAge: function() {
-		$( "#confirm-age" ).dialog({
-			modal: true,
-			buttons: {
-				"Yes": function(){
-					$( this ).dialog( "close" );
+		if ( !$.cookie( "ageConfirmed" ) ) {
+			$( "#confirm-age" ).dialog({
+				modal: true,
+				buttons: {
+					"Yes": function(){
+						beer.scrolling( false );
+						$.cookie( "ageConfirmed", true );
+						$( this ).dialog( "close" );
+					},
+					"No": function(){
+						window.location.href = "http://google.com";
+					}
 				},
-				"No": function(){
-					window.location.href = "http://google.com";
+				width: "auto",
+				classes: {
+					"ui-dialog-titlebar": "hide"
 				}
-			},
-			width: "auto",
-			classes: {
-				"ui-dialog-titlebar": "hide"
-			}
+			});
+			beer.scrolling( true );
+		}
+	},
+	interval: null,
+	scrolling: function( kill ){
+		$( "#confirm-age" ).parent().css({
+			position: "fixed"
+		});
+		$( "body" ).css({
+			height: kill ? "100%" : "auto",
+			overflow: kill ? "hidden" : "initial"
 		});
 	},
 	brew: function(){
