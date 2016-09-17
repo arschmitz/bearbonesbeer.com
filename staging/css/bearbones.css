@@ -79,6 +79,7 @@ div#dialog a {
     background-position-x: 48px;
     background-position-y: 24px;
     background-size: 400px;
+    background-repeat: repeat;
   }
 
   div#dialog {
