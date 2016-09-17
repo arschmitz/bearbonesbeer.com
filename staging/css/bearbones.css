@@ -24,12 +24,12 @@ a:hover {
   color: #111;
 }
 
-div.container {
-  text-align: center;
+div.row {
+  margin-bottom: 48px;
 }
 
-div.row {
-  margin-bottom: 24px;
+div.container {
+  text-align: center;
 }
 
 div.main {
