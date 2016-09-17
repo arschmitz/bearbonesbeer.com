@@ -48,6 +48,33 @@ div.beers {
   text-align: justify;
 }
 
+div.about p {
+  text-align: justify;
+}
+
 div.beers span.small {
   font-size: 0.6em;
+}
+
+div#dialog {
+
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  width: 80%;
+  transform: translateX(-50%);
+  background-color: #ddd;
+  border: 4px solid #333;
+  padding: 64px 24px 64px 24px;
+  text-align: center;
+}
+
+div#dialog a {
+  cursor: pointer;
+}
+
+@media (min-width: 550px){
+  div#dialog {
+      width: 40%;
+  }
 }
