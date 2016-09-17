@@ -25,10 +25,12 @@ function eraseCookie(name) {
 
 function confirm_age(){
   document.getElementById('dialog').style.display = 'none';
+  document.getElementById('container').style.display = 'block';
   createCookie("over21", "yes", 7);
 }
 
 function show_box() {
+  document.getElementById('container').style.display = 'none';
   document.getElementById('dialog').style.display = 'block';
 }
 

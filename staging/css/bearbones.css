@@ -41,6 +41,7 @@ div.menu {
 }
 
 img.framed {
+  width: 90%;
   border: 8px double #666;
 }
 
@@ -74,7 +75,19 @@ div#dialog a {
 }
 
 @media (min-width: 550px){
+  body {
+    background-position-x: 48px;
+    background-position-y: 24px;
+    background-size: 400px;
+  }
+
   div#dialog {
-      width: 40%;
+      width: 50%;
+      padding-top: 84px;
+      padding-bottom: 84px;
+  }
+
+  img.framed {
+    width: 70%;
   }
 }
