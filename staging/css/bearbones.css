@@ -57,7 +57,7 @@ div.beers span.small {
 }
 
 div#dialog {
-
+  display: none;
   position: fixed;
   top: 120px;
   left: 50%;
