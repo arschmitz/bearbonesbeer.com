@@ -1,0 +1,13 @@
+body {
+  background-image: url("../images/raybear.png");
+  background-color: #c0c0c0;
+  background-position-x: 12px;
+  background-position-y: 0px;
+  background-size: 400px;
+  background-repeat: no-repeat;
+}
+
+.address {
+  margin-top: 24px;
+  text-align: center;
+}
