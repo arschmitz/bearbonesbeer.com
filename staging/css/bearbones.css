@@ -1,24 +1,53 @@
 body {
   background-image: url("../images/raybear_shrunk.png");
-  background-color: #c0c0c0;
+  background-color: #ddd;
   background-position-x: 24px;
   background-position-y: -12px;
   background-size: 400px;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  color: #333;
+  color: #666;
 }
 
 h1,h2,h3,h4,h5 {
-  margin: 8px 4px 8px 4px;
+  margin: 6px 0px 6px 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #111;
+}
+
+div.container {
+  text-align: center;
+}
+
+div.row {
+  margin-bottom: 24px;
 }
 
 div.main {
   margin-top: 48px;
-  text-align: center;
+}
+
+div.menu {
+  margin-bottom: 6px;
 }
 
 img.framed {
   border: 8px double #666;
+}
+
+div.beers {
+  text-align: justify;
+}
+
+div.beers span.small {
+  font-size: 0.6em;
 }
