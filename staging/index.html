@@ -34,25 +34,52 @@
 </head>
 <body>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container" id="container">
-    <!-- "PAGE" -->
-    <div class="row main" id="main">
-      <div class="column">
-        <h2>Bear Bones Beer</h2>
-        <h5>43 Lisbon St, Lewiston, ME</h5>
-        <div class="menu">
-          <a href="#beer">Beer</a> |
-          <a href="#about">About</a> |
-          <a href="#contact">Contact</a>
+  <div class="container">
+    <div class="banner">
+      <img src="images/bbb.png" />
+    </div>
+    <div class="menu">
+      <a href="#beer">Beer</a> |
+      <a href="https://www.facebook.com/bearbonesbeer/events">Events</a> |
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="row about">
+      <div class="about-cushion">
+        <div class="column one-half min200 pad">
+          <div class="location">
+            <h5>43 Lisbon St</h5>
+            <h5>Lewiston, ME</h5>
+          </div>
+          <div class="social">
+            <a href="https://facebook.com/bearbonesbeer">
+              <img class="logo" src="images/logos/fb.png" />
+            </a>
+            <a href="https://twitter.com/bearbonesbeer">
+              <img class="logo" src="images/logos/twitter.png" />
+            </a>
+            <a href="https://instagram.com/bearbonesbeer">
+              <img class="logo" src="images/logos/insta.png" />
+            </a>
+          </div>
         </div>
-        <div>
-          <img class='framed' src="images/ebenadam.jpg" width="80%" />
+        <div class="column one-half min200 pad">
+          <div class="hours">
+            <h5>Wed-Fri: 4-10pm</h5>
+            <h5>Saturday: 12-10pm</h5>
+            <h5>Sunday: 12-6pm</h5>
+          </div>
         </div>
       </div>
+      <div class="columns twelve">
+        <img class="framed" src="images/current_selection/current.png" />
+      </br>
+        Bear Bones Beer is an independent nano-brewery located in downtown
+        Lewiston, Maine with a focus on making high quality, sustainable,
+        craft beer.
+      </div>
     </div>
-    <!-- end page -->
+
+    <hr>
 
     <div class="row beer" id="beer">
       <div class="column">
@@ -85,7 +112,7 @@
 
           <h5><a href="#pinkpils" id="pinkpils">Pink Pils</a> <span class="small">FG: 1.008 | ABV: 5.7% | IBU: 19</span></h5>
           <p>
-            Our own twist on the classic Bohemian pilsner, the Pink Pills is
+            Our own twist on the classic Bohemian pilsner, the Pink Pils is
             light, refreshing, and shockingly pink. The color is imparted by
             fresh beet juice, which pairs well with the traditional flavor
             profile of a true pilsner. This is a great beer to showcase
@@ -102,24 +129,21 @@
             each sip.
           </p>
 
+          <h5><a href="#newdead" id="newdead">New Dead IPA</a> <span class="small">FG: 1.013 | ABV: 5.9% | IBU: 70.8</span></h5>
+          <p>
+            A highly accessible IPA, which grew out of a simple red ale.
+            The New Dead is true to the BJCP guidelines for the American
+            IPA style, yet is more subtle, and pleasantly hoppy without
+            being overpowering.
+          </p>
+
+
         </div>
-        <div><a href="#main">[home]</a></div>
+        <div><a href="#">[home]</a></div>
       </div>
     </div>
 
-    <div class="row about" id="about">
-      <div class="column">
-        <h2>About Us</h2>
-        <p>
-          Bear Bones Beer is an independent nano-brewery located in downtown
-          Lewiston, Maine with a focus on making high quality, sustainable, craft beer.
-          We hope to help fill the growing niche for food-related businesses
-          on Lisbon Street, which currently include Fuel Restaurant, Marche
-          Kitchen and Wine Bar, and Forage Market.
-        </p>
-        <div><a href="#main">[home]</a></div>
-      </div>
-    </div>
+    <hr>
 
     <div class="row contact" id="contact">
       <div class="column">
@@ -128,22 +152,26 @@
         <p>
           43 Lisbon St</br>
           Lewiston, ME 04240</br>
-          207.200.1324</br>
           <a href="mailto:bearbonesbeer@gmail.com">bearbonesbeer@gmail.com</a></br>
-          <a href="https://www.facebook.com/bearbonesbeer">facebook</a>
+          207.200.1324</br></br>
+          <img class="framed" src="images/owners.png" />
         </p>
-        <div><a href="#main">[home]</a></div>
+        <div><a href="#">[home]</a></div>
       </div>
     </div>
 
-    <div>
-      </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+    <div class="spacer">
+      </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+      <div class="banner">
+        <a href="#"><img src="images/bbb.png" /></a>
+      </div>
     </div>
   </div>
 
+
   <div id="dialog">
     <h1>Are you over 21?</h1>
-    <h3><a onclick="confirm_age()" href="#main">Yes</a> &nbsp; | &nbsp; <a href="#" onclick="window.location='https://www.abcmouse.com/'">No</a></h3>
+    <h3><a onclick="confirm_age()" href="#">Yes</a> &nbsp; | &nbsp; <a href="#" onclick="window.location='https://www.abcmouse.com/'">No</a></h3>
   </div>
   <script type="text/javascript">
     check_age();
