@@ -25,7 +25,7 @@
 
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="js/confirm.js"></script>
+  <script type="text/javascript" src="js/confirm.js"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -34,7 +34,7 @@
 </head>
 <body>
 
-  <div class="container">
+  <div class="container" id="container">
     <div class="banner">
       <img src="images/bbb.png" />
     </div>
@@ -71,11 +71,9 @@
         </div>
       </div>
       <div class="columns twelve">
-        <img class="framed" src="images/current_selection/current.png" />
-      </br>
-        Bear Bones Beer is an independent nano-brewery located in downtown
-        Lewiston, Maine with a focus on making high quality, sustainable,
-        craft beer.
+        <a href="images/current_selection/current.png">
+          <img class="framed" src="images/current_selection/current.png" />
+        </a>
       </div>
     </div>
 
@@ -84,6 +82,11 @@
     <div class="row beer" id="beer">
       <div class="column">
         <h2>The Beer</h2>
+        <div class="description">
+          <blockquote>Bear Bones Beer is an independent nano-brewery located in downtown
+          Lewiston, Maine with a focus on making high quality, sustainable,
+          craft beer.</blockquote>
+        </div>
         <div class="beers">
           <h5><a href="#doublecream" id="doublecream">Double C.R.E.A.M.</a> <span class="small">FG: 1.012 | ABV: 7.1% | IBU: 40</span></h5>
           <p>
