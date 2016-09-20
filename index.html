@@ -1,141 +1,183 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Bear Bones Beer</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-		<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<html lang="en">
+<head>
 
-		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Bear Bones Beer</title>
+  <meta name="description" content="Local, craft beer">
+  <meta name="author" content="bearbonesbeer@gmail.com">
 
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/foundation.css">
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/sheetrock.css">
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link href="https://rawgit.com/lipis/bootstrap-social/gh-pages/bootstrap-social.css" rel="stylesheet" type="text/css">
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
-	</head>
-	<body>
-		<!--[if lt IE 7]>
-			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-		<!-- Add your site or application content here -->
-		<nav class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
-			<div clas="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">Bear Bones Beer</a>
-				</div>
-				<div id="navbar" class="navbar-spy navbar-collapse collapse" >
-					<ul class="nav navbar-nav navbar-right">
-						<li><a>&nbsp;</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<div class="jumbotron">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<img src="http://i.imgur.com/cGe45qy.png" class="confirm-image" >
-					</div>
-					<div class="col-md-6">
-						<br/><br/><br/><br/><br/><br/>
-						<h2>Coming Spring 2015</h2>
-						<h2>43 Lisbon St Lewiston, ME</h2 >
-						<h2><a href="https://plus.google.com/112302998595970971277" rel="publisher">Google+</a></h2>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container" id="main">
-		</div>
-		</div>
-		<div id="confirm-age">
-			<img src="http://i.imgur.com/cGe45qy.png" class="confirm-image" >
-			<h1 class="confirm-text">Are you 21 or older?</h1>
-		</div>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-		<script src="js/plugins.js"></script>
-		<script src="js/vendor/jquery-ui.js"></script>
-		<script src="js/vendor/jqueryui-bootstrap-adapter.js"></script>
-		<script src="//cdn.rawgit.com/imakewebthings/waypoints/3.1.0/lib/jquery.waypoints.min.js"></script>
-        <script src="https://cdn.rawgit.com/imakewebthings/waypoints/3.1.0/lib/shortcuts/sticky.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-		<script src="js/main.js"></script>
-		<script src="https://cdn.rawgit.com/chriszarate/sheetrock/0.2.4/dist/jquery.sheetrock.min.js"></script>
-		<script src="js/handlebars-helpers.js"></script>
-		<script id="entry-template" type="text/x-handlebars-template">
-			{{#xif " this.cells.A === 'image-text' "}}
-			<div class="row">
-				<div class="col-md-6">
-					<img src="{{this.cells.B}}" class="side-img">
-				</div>
-				<div class="col-md-6 row-text">
-					<{{this.cells.D}}>
-					{{this.cells.C}}
-					</{{this.cells.D}}>
-				</div>
-			</div>
-			{{/xif}}
-			{{#xif " this.cells.A === 'text-image' "}}
-			<div class="row">
-				<div class="col-md-6 row-text">
-					<{{this.cells.D}}>
-					{{this.cells.B}}
-					</{{this.cells.D}}>
-				</div>
-				<div class="col-md-6">
-					<img src="{{this.cells.C}}" class="side-img">
-				</div>
-			</div>
-			{{/xif}}
-			</div>
-			{{#xif " this.cells.A === 'sheet' "}}
-				<table src="{{this.cells.B}}"></table>
-			{{/xif}}
-			{{#xif " this.cells.A === 'header' "}}
-				<h1>{{this.cells.B}}</h1>
-				<hr/>
-			{{/xif}}
-			{{#xif " this.cells.A === 'break' "}}
-				<br/>
-			{{/xif}}
-			{{#xif " this.cells.A === 'image-header' "}}
-				<div class="image-header">
-					<img src="{{this.cells.B}}">
-					<div class="image-header-text">
-						<{{this.cells.D}} class="sticky-header-text">{{this.cells.C}}</{{this.cells.D}}>
-						<hr/>
-					</div>
-				</div>
-			{{/xif}}
-		</script>
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/bearbones.css">
 
-		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-		<script>
-			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-			e.src='//www.google-analytics.com/analytics.js';
-			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-			ga('create','UA-XXXXX-X');ga('send','pageview');
-		</script>
-	</body>
+  <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript" src="js/confirm.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.ico">
+
+</head>
+<body>
+
+  <div class="container" id="container">
+    <div class="banner">
+      <img src="images/bbb.png" />
+    </div>
+    <div class="menu">
+      <a href="#beer">Beer</a> |
+      <a href="https://www.facebook.com/bearbonesbeer/events">Events</a> |
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="row about">
+      <div class="about-cushion">
+        <div class="column one-half min200 pad">
+          <div class="location">
+            <h5>43 Lisbon St</h5>
+            <h5>Lewiston, ME</h5>
+          </div>
+          <div class="social">
+            <a href="https://facebook.com/bearbonesbeer">
+              <img class="logo" src="images/logos/fb.png" />
+            </a>
+            <a href="https://twitter.com/bearbonesbeer">
+              <img class="logo" src="images/logos/twitter.png" />
+            </a>
+            <a href="https://instagram.com/bearbonesbeer">
+              <img class="logo" src="images/logos/insta.png" />
+            </a>
+          </div>
+        </div>
+        <div class="column one-half min200 pad">
+          <div class="hours">
+            <h5>Wed-Fri: 4-10pm</h5>
+            <h5>Saturday: 12-10pm</h5>
+            <h5>Sunday: 12-6pm</h5>
+          </div>
+        </div>
+      </div>
+      <div class="columns twelve">
+        <a href="images/current_selection/current.png">
+          <img class="framed" src="images/current_selection/current.png" />
+        </a>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row beer" id="beer">
+      <div class="column">
+        <h2>The Beer</h2>
+        <div class="description">
+          <blockquote>Bear Bones Beer is an independent nano-brewery located in downtown
+          Lewiston, Maine with a focus on making high quality, sustainable,
+          craft beer.</blockquote>
+        </div>
+        <div class="beers">
+          <h5><a href="#doublecream" id="doublecream">Double C.R.E.A.M.</a> <span class="small">FG: 1.012 | ABV: 7.1% | IBU: 40</span></h5>
+          <p>
+            The Double C.R.E.A.M. is a big beer inspired by Bourbon.
+            By law the mash from which Bourbon is made must be comprised
+            of at least half corn, and it must be aged on freshly charred oak.
+            These unique qualities help make a subtle yet distinct ale which
+            drinks surprisingly light.
+          </p>
+
+          <h5><a href="#bucksseason" id="bucksseason">Buck’s Season</a> <span class="small">FG: 1.008 | ABV: 4.3% | IBU: 48</span></h5>
+          <p>
+            A crisp, light, easy drinking beer designed to showcase hops.
+            Buck’s Season is a session ale rather than an IPA, as the gravity
+            and alcohol content are much lower, and the hopping is more fruity than bitter.
+          </p>
+
+          <h5><a href="#oldsmokey" id="oldsmokey">Old Smokey</a> <span class="small">FG: 1.010 | ABV: 5.4% | IBU: 25.6</span></h5>
+          <p>
+            This pale ale technically falls under the smoked ale category,
+            yet is not as harsh as others in the style. The mesquite smoked
+            malt is used to give the beer depth of flavor without making it
+            too complex. This special flavor pale ale is a delicious light
+            bodied alternative to a typical pale ale.
+          </p>
+
+          <h5><a href="#pinkpils" id="pinkpils">Pink Pils</a> <span class="small">FG: 1.008 | ABV: 5.7% | IBU: 19</span></h5>
+          <p>
+            Our own twist on the classic Bohemian pilsner, the Pink Pils is
+            light, refreshing, and shockingly pink. The color is imparted by
+            fresh beet juice, which pairs well with the traditional flavor
+            profile of a true pilsner. This is a great beer to showcase
+            specifically during breast cancer awareness month.
+          </p>
+
+          <h5><a href="#johnnyrye" id="johnnyrye">Johnny Rye Ale</a> <span class="small">FG: 1.012 | ABV: 5.2% | IBU: 40.3</span></h5>
+          <p>
+            The Johnny Rye is an American Style rye ale. Unlike Roggenbier,
+            this rye ale is lighter in body, color, and clarity than its
+            German counterpart. More like an American brown ale, the Johnny
+            is delicious and easy to drink. The total amount of rye in the
+            brew is much lower, leaving a slightly spicy note at the end of
+            each sip.
+          </p>
+
+          <h5><a href="#newdead" id="newdead">New Dead IPA</a> <span class="small">FG: 1.013 | ABV: 5.9% | IBU: 70.8</span></h5>
+          <p>
+            A highly accessible IPA, which grew out of a simple red ale.
+            The New Dead is true to the BJCP guidelines for the American
+            IPA style, yet is more subtle, and pleasantly hoppy without
+            being overpowering.
+          </p>
+
+
+        </div>
+        <div><a href="#">[home]</a></div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row contact" id="contact">
+      <div class="column">
+        <h2>Contact</h2>
+        <h5>Bear Bones Beer</h5>
+        <p>
+          43 Lisbon St</br>
+          Lewiston, ME 04240</br>
+          <a href="mailto:bearbonesbeer@gmail.com">bearbonesbeer@gmail.com</a></br>
+          207.200.1324</br></br>
+          <img class="framed" src="images/owners.png" />
+        </p>
+        <div><a href="#">[home]</a></div>
+      </div>
+    </div>
+
+    <div class="spacer">
+      </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+      <div class="banner">
+        <a href="#"><img src="images/bbb.png" /></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="dialog">
+    <h1>Are you over 21?</h1>
+    <h3><a onclick="confirm_age()" href="#">Yes</a> &nbsp; | &nbsp; <a href="#" onclick="window.location='https://www.abcmouse.com/'">No</a></h3>
+  </div>
+  <script type="text/javascript">
+    check_age();
+  </script>
+</body>
 </html>
