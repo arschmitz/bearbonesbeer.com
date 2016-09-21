@@ -3,17 +3,11 @@ body {
   background-color: #eee;
   background-size: 400px;
   background-position-x: 40px;
-  background-position-y: 40px;
+  background-position-y: 20px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #000;
   font-size: 1.8em;
-}
-
-div.about img.logo {
-  width: 24px;
-  margin-right: 6px;
-  margin-left: 6px;
 }
 
 div.min200 {
@@ -50,6 +44,16 @@ div.container {
 
 div.banner img {
   width: 100%;
+}
+
+div.social img.logo {
+  width: 24px;
+  margin-right: 6px;
+  margin-left: 6px;
+}
+
+img.current {
+  margin-top: 1em;
 }
 
 div.menu {
