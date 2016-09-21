@@ -1,9 +1,9 @@
 body {
-  background-image: url("../images/raybear_shrunk.png");
+  background-image: url("../images/raybear_small.png");
   background-color: #eee;
-  background-size: 400px;
-  background-position-x: 40px;
-  background-position-y: 20px;
+  background-size: 300px;
+  background-position: center;
+  background-position-y: -10px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #000;
@@ -97,8 +97,6 @@ div#dialog {
 
 @media (min-width: 450px){
   body {
-    background-position-x: 48px;
-    background-position-y: 24px;
     background-size: 400px;
     background-repeat: repeat;
   }
