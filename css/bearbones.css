@@ -119,3 +119,10 @@ div#dialog {
     width: 70%;
   }
 }
+
+
+
+/* custom overrides */
+.underline {
+  text-decoration: underline;
+}
