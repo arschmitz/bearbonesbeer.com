@@ -416,11 +416,3 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
-
-
-
-
-/* custom defaults */
-.underline {
-  text-decoration: underline;
-}
