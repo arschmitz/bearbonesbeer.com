@@ -65,9 +65,25 @@ img.framed {
   border: 8px double #666;
 }
 
+div.lewiston, div.bridgton {
+  margin-bottom: 18px;
+}
+
 div.about h5 {
   font-size: 1.2em;
   margin: 0px;
+}
+
+div.location {
+  margin-bottom: 0.4em;
+}
+
+div.location h5 {
+  line-height: 0.9em;
+}
+
+div.hours h5 {
+  font-size: 0.8em;
 }
 
 div.social {
